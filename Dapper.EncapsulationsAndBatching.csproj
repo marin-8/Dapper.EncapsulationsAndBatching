@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>latestMajor</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Dapper.EncapsulationsAndBatching</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+		<ImplicitUsings>false</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<UseShortFileNames>True</UseShortFileNames>
+		<AssemblyName>Dapper.EncapsulationsAndBatching</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Dapper" Version="2.0.123" />
+	</ItemGroup>
+
+</Project>
