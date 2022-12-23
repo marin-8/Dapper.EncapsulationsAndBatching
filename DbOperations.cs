@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using Dapper.EncapsulationsAndBatching.Types;
-using System.Data.Common;
 
 namespace Dapper.EncapsulationsAndBatching;
 
