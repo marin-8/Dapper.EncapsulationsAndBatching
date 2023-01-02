@@ -15,25 +15,25 @@ A set of types for encapsulating database operations and a way to execute them b
 ```C#
 public sealed class QueryCustomerCount : QueryScalar<int>
 {
-	private const string _SQL = "SELECT COUNT(*) FROM Customers;";
+    private const string _SQL = "SELECT COUNT(*) FROM Customers;";
     public QueryCustomerCount () : base(_SQL) {}
 }
 
 public sealed class QueryCustomerById : QuerySingle<Customer>
 {
-	private const string _SQL = "SELECT * FROM Customers WHERE CustomerId = @Id;";
+    private const string _SQL = "SELECT * FROM Customers WHERE CustomerId = @Id;";
     public QueryCustomerById (int id) : base(_SQL, new { Id = id }) {}
 }
 
 public sealed class QueryOrdersByCustomerId : QueryList<Order>
 {
-	private const string _SQL = "SELECT * FROM Orders WHERE CustomerId = @Id;";
+    private const string _SQL = "SELECT * FROM Orders WHERE CustomerId = @Id;";
     public QueryOrdersByCustomerId (int id) : base(_SQL, new { Id = id }) {}
 }
 
 public sealed class UpdateCustomerName : ExecuteCommand
 {
-	private const string _SQL = "UPDATE Customers SET Name = @Name WHERE CustomerId = @Id;";
+    private const string _SQL = "UPDATE Customers SET Name = @Name WHERE CustomerId = @Id;";
     public UpdateCustomerName (int id, string name) : base(_SQL, new { Id = id, Name = name }) {}
 }
 ```
@@ -51,7 +51,7 @@ using (var dbConnection = new SqlConnection(connectionString))
 {
     await dbConnection.OpenAsync();
 
-	// Pass them as parameters to the `ExecuteAsync` extension method
+    // Pass them as parameters to the `ExecuteAsync` extension method
     await dbConnection.ExecuteAsync(query1, query2, query3, query4);
 }
 
