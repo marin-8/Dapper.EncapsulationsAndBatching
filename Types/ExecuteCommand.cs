@@ -12,9 +12,7 @@ public abstract class ExecuteCommand : IDbOperation
 
 	public ExecuteCommand (string sql, object? parameters=null)
 	{
-		if (sql == null) throw new ArgumentNullException(nameof(sql));
-
-		SQL = sql[sql.Length-1] == ';' ? sql : sql + ';';
+		SQL = sql ?? throw new ArgumentNullException(nameof(sql));
 		Parameters = parameters;
 	}
 

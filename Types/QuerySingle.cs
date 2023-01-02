@@ -13,9 +13,7 @@ public abstract class QuerySingle<T> : IDbOperation
 
 	public QuerySingle (string sql, object? parameters=null)
 	{
-		if (sql == null) throw new ArgumentNullException(nameof(sql));
-
-		SQL = sql[sql.Length-1] == ';' ? sql : sql + ';';
+		SQL = sql ?? throw new ArgumentNullException(nameof(sql));
 		Parameters = parameters;
 	}
 

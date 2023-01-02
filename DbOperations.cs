@@ -78,7 +78,7 @@ public static class DbOperations
 				}
 			}
 
-			combinedSQL += sql;
+			combinedSQL += sql[sql.Length-1] == ';' ? sql : sql + ';';
 		}
 
 		return new CombinedSQLAndParameters(combinedSQL, combinedParameters);
