@@ -21,7 +21,7 @@
 		<Title>Dapper.EncapsulationsAndBatching</Title>
 		<Authors>Daniel Marín</Authors>
 		<Description>A set of types for encapsulating database operations and a way to execute them batched in a single round trip.</Description>
-		<Version>1.0.0-beta</Version>
+		<Version>1.1.0-beta</Version>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/marin-8/Dapper.EncapsulationsAndBatching</RepositoryUrl>
 		<PackageTags>dapper;orm;micro-orm;sql;batch</PackageTags>
