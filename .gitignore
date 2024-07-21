@@ -3,7 +3,3 @@
 [Bb]in/
 [Oo]bj/
 .vs/
-*.dbmdl
-*.jfm
-*.user
-GlobalSuppressions.cs

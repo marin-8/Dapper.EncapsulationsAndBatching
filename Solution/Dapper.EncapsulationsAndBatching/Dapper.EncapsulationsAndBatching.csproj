@@ -1,27 +1,23 @@
+
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<LangVersion>latestMajor</LangVersion>
+		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<Nullable>Enable</Nullable>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+		<UseShortFileNames>True</UseShortFileNames>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AssemblyName>Dapper.EncapsulationsAndBatching</AssemblyName>
 		<RootNamespace>Dapper.EncapsulationsAndBatching</RootNamespace>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Nullable>enable</Nullable>
-		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-		<ImplicitUsings>false</ImplicitUsings>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<EnableNETAnalyzers>true</EnableNETAnalyzers>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<UseShortFileNames>True</UseShortFileNames>
-		<AssemblyName>Dapper.EncapsulationsAndBatching</AssemblyName>
 		<Title>Dapper.EncapsulationsAndBatching</Title>
 		<Authors>Daniel Marín</Authors>
 		<Description>A set of types for encapsulating database operations and a way to execute them batched in a single round trip.</Description>
@@ -33,11 +29,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Dapper" Version="2.0.123" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="README.md" Pack="True" PackagePath="\" />
+		<PackageReference Include="Dapper" Version="2.1.35" PrivateAssets="all" />
+		<PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" />
 	</ItemGroup>
 
 </Project>
